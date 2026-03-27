@@ -1,16 +1,13 @@
-gy · HTML
-Copy
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get In Touch | Flow Scale Marketing</title>
+    <title>Website Design Enquiry | Flow Scale Marketing</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Syne:wght@400;600;700;800&family=Work+Sans:wght@300;400;500;600&family=DM+Sans:wght@700;800;900&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
- 
+
         :root {
             --primary: #FF3366;
             --dark: #0A0E27;
@@ -18,7 +15,7 @@ Copy
             --accent: #00D9FF;
             --gray: #6B7280;
         }
- 
+
         body {
             font-family: 'Work Sans', sans-serif;
             background: var(--dark);
@@ -26,13 +23,13 @@ Copy
             overflow-x: hidden;
             min-height: 100vh;
         }
- 
+
         .container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
         }
- 
+
         header {
             position: fixed;
             top: 0;
@@ -42,7 +39,7 @@ Copy
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255, 51, 102, 0.1);
         }
- 
+
         nav {
             display: flex;
             justify-content: space-between;
@@ -51,7 +48,7 @@ Copy
             max-width: 1400px;
             margin: 0 auto;
         }
- 
+
         .logo {
             font-family: 'Syne', sans-serif;
             font-size: 1.5rem;
@@ -60,15 +57,15 @@ Copy
             letter-spacing: -0.02em;
             text-decoration: none;
         }
- 
+
         .logo span { color: var(--primary); }
- 
+
         .nav-links {
             display: flex;
             gap: 2.5rem;
             align-items: center;
         }
- 
+
         .nav-links a {
             color: var(--light);
             text-decoration: none;
@@ -76,9 +73,9 @@ Copy
             transition: color 0.3s ease;
             font-size: 0.95rem;
         }
- 
+
         .nav-links a:hover { color: var(--primary); }
- 
+
         .cta-btn {
             font-family: 'DM Sans', sans-serif;
             background: var(--primary);
@@ -93,14 +90,13 @@ Copy
             text-decoration: none;
             display: inline-block;
         }
- 
+
         .cta-btn:hover {
             background: #E62958;
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(255, 51, 102, 0.3);
         }
- 
-        /* Page layout */
+
         .page-wrapper {
             min-height: 100vh;
             display: flex;
@@ -109,7 +105,7 @@ Copy
             position: relative;
             overflow: hidden;
         }
- 
+
         .page-wrapper::before {
             content: '';
             position: absolute;
@@ -119,7 +115,7 @@ Copy
                 radial-gradient(circle at 85% 30%, rgba(0, 217, 255, 0.07) 0%, transparent 50%);
             pointer-events: none;
         }
- 
+
         .page-grid {
             display: grid;
             grid-template-columns: 1fr 1.1fr;
@@ -128,12 +124,9 @@ Copy
             position: relative;
             z-index: 2;
         }
- 
-        /* Left side info */
-        .page-info {
-            padding-top: 1rem;
-        }
- 
+
+        .page-info { padding-top: 1rem; }
+
         .section-tag {
             font-family: 'DM Sans', sans-serif;
             font-size: 0.75rem;
@@ -144,7 +137,7 @@ Copy
             margin-bottom: 1.25rem;
             display: block;
         }
- 
+
         .page-info h1 {
             font-family: 'Playfair Display', serif;
             font-size: clamp(2.5rem, 4vw, 3.5rem);
@@ -153,21 +146,21 @@ Copy
             letter-spacing: -0.02em;
             margin-bottom: 1.5rem;
         }
- 
+
         .gradient-text {
             background: linear-gradient(135deg, var(--primary), var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
- 
+
         .page-info p {
             color: var(--gray);
             font-size: 1.05rem;
             line-height: 1.85;
             margin-bottom: 2.5rem;
         }
- 
+
         .info-points {
             list-style: none;
             display: flex;
@@ -175,13 +168,13 @@ Copy
             gap: 1.1rem;
             margin-bottom: 3rem;
         }
- 
+
         .info-point {
             display: flex;
             align-items: flex-start;
             gap: 0.875rem;
         }
- 
+
         .info-point-dot {
             width: 8px;
             height: 8px;
@@ -190,18 +183,18 @@ Copy
             margin-top: 7px;
             flex-shrink: 0;
         }
- 
+
         .info-point span {
             color: rgba(248,249,250,0.8);
             font-size: 0.95rem;
             line-height: 1.7;
         }
- 
+
         .contact-direct {
             padding-top: 2rem;
             border-top: 1px solid rgba(255,255,255,0.08);
         }
- 
+
         .contact-direct p {
             font-size: 0.85rem;
             color: var(--gray);
@@ -211,13 +204,13 @@ Copy
             font-family: 'DM Sans', sans-serif;
             font-weight: 700;
         }
- 
+
         .contact-items {
             display: flex;
             flex-direction: column;
             gap: 0.75rem;
         }
- 
+
         .contact-item {
             display: flex;
             align-items: center;
@@ -225,17 +218,17 @@ Copy
             color: var(--gray);
             font-size: 0.93rem;
         }
- 
+
         .contact-icon { color: var(--primary); }
- 
-        /* Form card */
+
+        /* Form */
         .form-card {
             background: rgba(255,255,255,0.03);
             border: 1px solid rgba(255,255,255,0.08);
             border-radius: 28px;
             padding: 3rem;
         }
- 
+
         .form-card h2 {
             font-family: 'Playfair Display', serif;
             font-size: 1.75rem;
@@ -243,18 +236,16 @@ Copy
             margin-bottom: 0.5rem;
             letter-spacing: -0.01em;
         }
- 
+
         .form-card > p {
             color: var(--gray);
             font-size: 0.93rem;
             line-height: 1.7;
             margin-bottom: 2rem;
         }
- 
-        .field {
-            margin-bottom: 1.25rem;
-        }
- 
+
+        .field { margin-bottom: 1.25rem; }
+
         .field label {
             display: block;
             font-size: 0.8rem;
@@ -265,7 +256,7 @@ Copy
             letter-spacing: 0.06em;
             font-family: 'DM Sans', sans-serif;
         }
- 
+
         .field input,
         .field select,
         .field textarea {
@@ -281,41 +272,99 @@ Copy
             outline: none;
             -webkit-appearance: none;
         }
- 
+
         .field input::placeholder,
         .field textarea::placeholder {
             color: rgba(248,249,250,0.25);
         }
- 
+
         .field input:focus,
         .field select:focus,
         .field textarea:focus {
             border-color: rgba(255,51,102,0.5);
             background: rgba(255,255,255,0.07);
         }
- 
+
         .field select {
             cursor: pointer;
             color: var(--light);
         }
- 
+
         .field select option {
             background: #0A0E27;
             color: var(--light);
         }
- 
+
         .field textarea {
-            height: 120px;
+            height: 110px;
             resize: vertical;
             line-height: 1.6;
         }
- 
+
         .field-row {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1rem;
         }
- 
+
+        /* Radio-style package selector */
+        .package-options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+        }
+
+        .package-option {
+            display: flex;
+            align-items: center;
+            gap: 0.875rem;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 0.875rem 1.1rem;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .package-option:hover {
+            border-color: rgba(255,51,102,0.3);
+            background: rgba(255,51,102,0.04);
+        }
+
+        .package-option.selected {
+            border-color: rgba(255,51,102,0.5);
+            background: rgba(255,51,102,0.08);
+        }
+
+        .package-option input[type="radio"] {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--primary);
+            flex-shrink: 0;
+            padding: 0;
+            border-radius: 50%;
+        }
+
+        .package-option-text {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .package-option-name {
+            font-size: 0.93rem;
+            font-weight: 500;
+            color: var(--light);
+        }
+
+        .package-option-price {
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+        }
+
         .submit-btn {
             width: 100%;
             padding: 1rem;
@@ -330,13 +379,13 @@ Copy
             transition: all 0.3s ease;
             margin-top: 0.5rem;
         }
- 
+
         .submit-btn:hover {
             background: #E62958;
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(255,51,102,0.3);
         }
- 
+
         .form-note {
             font-size: 0.78rem;
             color: var(--gray);
@@ -344,14 +393,13 @@ Copy
             margin-top: 1rem;
             line-height: 1.6;
         }
- 
-        /* Success state */
+
         .success-state {
             display: none;
             text-align: center;
             padding: 3rem 1rem;
         }
- 
+
         .success-icon {
             width: 64px;
             height: 64px;
@@ -364,14 +412,14 @@ Copy
             margin: 0 auto 1.5rem;
             font-size: 1.75rem;
         }
- 
+
         .success-state h3 {
             font-family: 'Playfair Display', serif;
             font-size: 1.75rem;
             font-weight: 700;
             margin-bottom: 0.75rem;
         }
- 
+
         .success-state p {
             color: var(--gray);
             font-size: 1rem;
@@ -379,20 +427,19 @@ Copy
             max-width: 340px;
             margin: 0 auto;
         }
- 
-        /* Footer */
+
         footer {
             background: rgba(0,0,0,0.3);
             border-top: 1px solid rgba(255,255,255,0.07);
             padding: 2rem 0;
         }
- 
+
         .footer-bottom {
             text-align: center;
             color: var(--gray);
             font-size: 0.82rem;
         }
- 
+
         @media (max-width: 900px) {
             .page-grid { grid-template-columns: 1fr; gap: 3rem; }
             .page-info { padding-top: 0; }
@@ -400,12 +447,12 @@ Copy
             .form-card { padding: 2rem 1.5rem; }
             .nav-links a:not(.cta-btn) { display: none; }
         }
- 
+
         html { scroll-behavior: smooth; }
     </style>
 </head>
 <body>
- 
+
     <header>
         <nav>
             <a href="index.html" class="logo">Flow<span>Scale</span></a>
@@ -417,37 +464,37 @@ Copy
             </div>
         </nav>
     </header>
- 
+
     <div class="page-wrapper">
         <div class="container">
             <div class="page-grid">
- 
+
                 <!-- Left: Info -->
                 <div class="page-info">
-                    <span class="section-tag">Get Started</span>
-                    <h1>Let's Grow Your <span class="gradient-text">Business Together</span></h1>
+                    <span class="section-tag">Website Design Enquiry</span>
+                    <h1>Let's Build Your <span class="gradient-text">New Website</span></h1>
                     <p>
-                        Fill in the form and we'll be in touch within one working day. No hard sell, no jargon — just a straightforward conversation about what you need and how we can help.
+                        Tell us a bit about your business and what you're looking for. We'll come back to you within one working day with a clear recommendation and no-obligation quote.
                     </p>
                     <ul class="info-points">
                         <li class="info-point">
                             <div class="info-point-dot"></div>
-                            <span>We'll review your enquiry and get back to you within one working day</span>
+                            <span>Response within one working day — no waiting around</span>
                         </li>
                         <li class="info-point">
                             <div class="info-point-dot"></div>
-                            <span>A free, no-obligation strategy call to understand your goals</span>
+                            <span>Free consultation call to go through your requirements in detail</span>
                         </li>
                         <li class="info-point">
                             <div class="info-point-dot"></div>
-                            <span>A clear proposal tailored to your business — no hidden costs</span>
+                            <span>Clear, fixed-price quote — no hidden costs or surprises</span>
                         </li>
                         <li class="info-point">
                             <div class="info-point-dot"></div>
-                            <span>If we're not the right fit, we'll tell you — no pushy sales tactics</span>
+                            <span>Most websites completed and live within 14 days of sign-off</span>
                         </li>
                     </ul>
- 
+
                     <div class="contact-direct">
                         <p>Or reach us directly</p>
                         <div class="contact-items">
@@ -457,7 +504,7 @@ Copy
                             </div>
                             <div class="contact-item">
                                 <span class="contact-icon">📧</span>
-                                <span>jenson@flowscalemarketing.co.uk</span>
+                                <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6f050a011c00012f090300181c0c0e030a020e1d040a1b060108410c00411a04">[email&#160;protected]</a></span>
                             </div>
                             <div class="contact-item">
                                 <span class="contact-icon">🕐</span>
@@ -466,13 +513,13 @@ Copy
                         </div>
                     </div>
                 </div>
- 
+
                 <!-- Right: Form -->
                 <div class="form-card">
                     <div id="form-content">
-                        <h2>Tell us about your business</h2>
-                        <p>Takes less than 2 minutes. We'll take it from there.</p>
- 
+                        <h2>Your website enquiry</h2>
+                        <p>Fill in the details below and we'll put together a tailored quote for your trade business.</p>
+
                         <div class="field-row">
                             <div class="field">
                                 <label>First name</label>
@@ -483,12 +530,12 @@ Copy
                                 <input type="text" placeholder="e.g. Smith" id="lname" />
                             </div>
                         </div>
- 
+
                         <div class="field">
                             <label>Business name</label>
-                            <input type="text" placeholder="e.g. Smith Plumbing & Heating" id="business" />
+                            <input type="text" placeholder="e.g. your trade business name" id="business" />
                         </div>
- 
+
                         <div class="field-row">
                             <div class="field">
                                 <label>Phone number</label>
@@ -499,39 +546,71 @@ Copy
                                 <input type="email" placeholder="e.g. james@business.co.uk" id="email" />
                             </div>
                         </div>
- 
+
                         <div class="field">
-                            <label>Which service are you interested in?</label>
-                            <select id="service">
-                                <option value="" disabled selected>Select a service</option>
-                                <option>Google SEO</option>
-                                <option>Meta Ads (Facebook & Instagram)</option>
-                                <option>Google Ads</option>
-                                <option>Full marketing package</option>
-                                <option>Not sure yet — just want to chat</option>
+                            <label>Do you currently have a website?</label>
+                            <select id="existing">
+                                <option value="" disabled selected>Please select</option>
+                                <option>No — I need one built from scratch</option>
+                                <option>Yes — but it needs a full redesign</option>
+                                <option>Yes — I just need some updates made</option>
                             </select>
                         </div>
- 
+
                         <div class="field">
-                            <label>Tell us a bit about your situation</label>
-                            <textarea placeholder="e.g. We're a two-van plumbing business based in Leeds. We get most of our work through word of mouth but want to grow our online enquiries..." id="message"></textarea>
+                            <label>Which package are you interested in?</label>
+                            <div class="package-options" id="packages">
+                                <label class="package-option" onclick="selectPackage(this)">
+                                    <input type="radio" name="package" value="essential" />
+                                    <div class="package-option-text">
+                                        <span class="package-option-name">Essential — up to 3 pages</span>
+                                        <span class="package-option-price">£399</span>
+                                    </div>
+                                </label>
+                                <label class="package-option" onclick="selectPackage(this)">
+                                    <input type="radio" name="package" value="professional" />
+                                    <div class="package-option-text">
+                                        <span class="package-option-name">Professional — up to 6 pages</span>
+                                        <span class="package-option-price">£599</span>
+                                    </div>
+                                </label>
+                                <label class="package-option" onclick="selectPackage(this)">
+                                    <input type="radio" name="package" value="pro">
+                                    <div class="package-option-text">
+                                        <span class="package-option-name">Business Pro — up to 10 pages</span>
+                                        <span class="package-option-price">£999</span>
+                                    </div>
+                                </label>
+                                <label class="package-option" onclick="selectPackage(this)">
+                                    <input type="radio" name="package" value="unsure" />
+                                    <div class="package-option-text">
+                                        <span class="package-option-name">Not sure yet — help me decide</span>
+                                        <span class="package-option-price"></span>
+                                    </div>
+                                </label>
+                            </div>
                         </div>
- 
-                        <button class="submit-btn" onclick="handleSubmit()">Send Enquiry</button>
+
+                        <div class="field">
+                            <label>Anything else we should know?</label>
+                            <textarea placeholder="e.g. We're a roofing company based in Sheffield and want a site that showcases our work and gets us more local enquiries..." id="message"></textarea>
+                        </div>
+
+                        <button class="submit-btn" onclick="handleSubmit()">Send My Enquiry</button>
                         <p class="form-note">We'll never share your details with anyone. Expect a response within one working day.</p>
                     </div>
- 
+
                     <div class="success-state" id="success-state">
                         <div class="success-icon">✓</div>
                         <h3>Enquiry Received</h3>
-                        <p>Thanks for getting in touch. We'll review your details and be back in touch within one working day.</p>
+                        <p>Thanks for getting in touch. We'll review your details and come back to you with a tailored quote within one working day.</p>
                     </div>
                 </div>
- 
+
             </div>
         </div>
     </div>
- 
+
     <footer>
         <div class="container">
             <div class="footer-bottom">
@@ -539,22 +618,18 @@ Copy
             </div>
         </div>
     </footer>
- 
-    <script>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        function selectPackage(el) {
+            document.querySelectorAll('.package-option').forEach(opt => opt.classList.remove('selected'));
+            el.classList.add('selected');
+        }
+
         function handleSubmit() {
             const fname = document.getElementById('fname').value.trim();
             const phone = document.getElementById('phone').value.trim();
             const email = document.getElementById('email').value.trim();
- 
+
             if (!fname || !phone || !email) {
                 alert('Please fill in at least your name, phone number and email address.');
                 return;
-            }
- 
-            document.getElementById('form-content').style.display = 'none';
-            document.getElementById('success-state').style.display = 'block';
-        }
-    </script>
- 
-</body>
-</html>
