@@ -6,17 +6,13 @@
     <title>Flow Scale Marketing | Digital Marketing Solutions</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Syne:wght@400;600;700;800&family=Work+Sans:wght@300;400;500;600&family=DM+Sans:wght@700;800;900&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --primary: #FF3366;
-            --dark: #0A0E27;
-            --light: #F8F9FA;
-            --accent: #00D9FF;
+            --primary: #2563EB;
+            --dark: #0B0F1A;
+            --light: #F9FAFB;
+            --accent: #10B981;
             --gray: #6B7280;
         }
 
@@ -33,22 +29,21 @@
             padding: 0 2rem;
         }
 
-        /* Header */
         header {
             position: fixed;
             top: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(10, 14, 39, 0.95);
+            background: rgba(11, 15, 26, 0.96);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 51, 102, 0.1);
+            border-bottom: 1px solid rgba(37, 99, 235, 0.15);
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 2rem;
+            padding: 1.25rem 2rem;
             max-width: 1400px;
             margin: 0 auto;
         }
@@ -61,9 +56,7 @@
             letter-spacing: -0.02em;
         }
 
-        .logo span {
-            color: var(--primary);
-        }
+        .logo span { color: var(--primary); }
 
         .nav-links {
             display: flex;
@@ -79,15 +72,13 @@
             font-size: 0.95rem;
         }
 
-        .nav-links a:hover {
-            color: var(--primary);
-        }
+        .nav-links a:hover { color: var(--primary); }
 
         .cta-btn {
             font-family: 'DM Sans', sans-serif;
             background: var(--primary);
             color: white;
-            padding: 0.875rem 2rem;
+            padding: 0.75rem 1.75rem;
             border: none;
             border-radius: 50px;
             font-weight: 700;
@@ -99,432 +90,9 @@
         }
 
         .cta-btn:hover {
-            background: #E62958;
+            background: #1d4ed8;
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(255, 51, 102, 0.3);
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            padding-top: 125px;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(255, 51, 102, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(0, 217, 255, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        @keyframes fadeInUp {
-            from {  transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .hero-badge {
-            font-family: 'DM Sans', sans-serif;
-            display: inline-block;
-            background: linear-gradient(135deg, rgba(255,51,102,0.15), rgba(0,217,255,0.15));
-            border: 1px solid rgba(255,51,102,0.4);
-            color: #FF8CAB;
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        h1 {
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 800;
-            line-height: 1.05;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.03em;
-        }
-
-        /* Playfair Display for the hero headline — elegant contrast */
-        .hero-headline-serif {
-            font-family: 'Playfair Display', serif;
-            font-weight: 900;
-            font-size: clamp(3rem, 7vw, 5.5rem);
-            line-height: 1.08;
-            letter-spacing: -0.02em;
-            display: block;
-            margin-bottom: 0.3em;
-        }
-
-        .gradient-text {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--gray);
-            max-width: 580px;
-            margin-bottom: 2rem;
-            line-height: 1.85;
-            font-weight: 300;
-        }
-
-        /* Services Section */
-        .services {
-            padding: 8rem 0;
-            position: relative;
-        }
-
-        .section-tag {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--primary);
-            margin-bottom: 1rem;
-            display: block;
-            text-align: center;
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.2rem, 4vw, 3.5rem);
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-align: center;
-            letter-spacing: -0.01em;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: var(--gray);
-            font-size: 1.1rem;
-            max-width: 580px;
-            margin: 0 auto 5rem;
-            line-height: 1.8;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: linear-gradient(135deg, rgba(255, 51, 102, 0.04), rgba(0, 217, 255, 0.04));
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 24px;
-            padding: 3rem;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            transform: scaleX(0);
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .service-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(255, 51, 102, 0.25);
-            box-shadow: 0 24px 60px rgba(0,0,0,0.4), 0 0 40px rgba(255, 51, 102, 0.08);
-        }
-
-        .service-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .service-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .service-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.9rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            letter-spacing: -0.01em;
-        }
-
-        .service-card p {
-            color: var(--gray);
-            line-height: 1.85;
-            margin-bottom: 1.75rem;
-            font-size: 0.98rem;
-        }
-
-        .service-features {
-            list-style: none;
-        }
-
-        .service-features li {
-            color: rgba(248,249,250,0.7);
-            margin-bottom: 0.65rem;
-            padding-left: 1.5rem;
-            position: relative;
-            font-size: 0.93rem;
-        }
-
-        .service-features li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-            font-weight: bold;
-        }
-
-        /* Divider */
-        .section-divider {
-            width: 60px;
-            height: 2px;
-            background: linear-gradient(90deg, var(--primary), var(--accent));
-            margin: 0 auto 1.5rem;
-            border-radius: 2px;
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            padding: 8rem 0;
-            background: linear-gradient(180deg, transparent, rgba(255, 51, 102, 0.03), transparent);
-        }
-
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 1.75rem;
-            margin-top: 4rem;
-        }
-
-        .testimonial-card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 20px;
-            padding: 2.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .testimonial-card:hover {
-            background: rgba(255, 255, 255, 0.04);
-            border-color: rgba(255, 51, 102, 0.25);
-            transform: translateY(-4px);
-        }
-
-        .testimonial-stars {
-            color: #FFB800;
-            font-size: 1.1rem;
-            margin-bottom: 1.25rem;
-            letter-spacing: 2px;
-        }
-
-        .testimonial-text {
-            color: rgba(248,249,250,0.85);
-            font-size: 1rem;
-            line-height: 1.85;
-            margin-bottom: 2rem;
-            font-style: italic;
-            font-family: 'Work Sans', sans-serif;
-            font-weight: 300;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .author-avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 1rem;
-            font-family: 'DM Sans', sans-serif;
-            flex-shrink: 0;
-        }
-
-        .author-info h4 {
-            font-family: 'DM Sans', sans-serif;
-            font-weight: 700;
-            margin-bottom: 0.2rem;
-            font-size: 0.95rem;
-        }
-
-        .author-info p {
-            color: var(--gray);
-            font-size: 0.82rem;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            padding: 8rem 0;
-            text-align: center;
-        }
-
-        .cta-box {
-            background: linear-gradient(135deg, rgba(255, 51, 102, 0.08), rgba(0, 217, 255, 0.08));
-            border: 1px solid rgba(255, 51, 102, 0.18);
-            border-radius: 32px;
-            padding: 5rem 3rem;
-            max-width: 860px;
-            margin: 0 auto;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-box::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle at 50% 50%, rgba(255,51,102,0.06), transparent 60%);
-            pointer-events: none;
-        }
-
-        .cta-box h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2rem, 4vw, 3.2rem);
-            font-weight: 700;
-            margin-bottom: 1.25rem;
-            letter-spacing: -0.02em;
-        }
-
-        .cta-box p {
-            font-size: 1.15rem;
-            color: var(--gray);
-            margin-bottom: 2.5rem;
-            max-width: 520px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.8;
-        }
-
-        /* Footer */
-        footer {
-            background: rgba(0, 0, 0, 0.3);
-            border-top: 1px solid rgba(255, 255, 255, 0.07);
-            padding: 4rem 0 2rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
-        }
-
-        .footer-section h3 {
-            font-family: 'DM Sans', sans-serif;
-            font-size: 1rem;
-            font-weight: 700;
-            margin-bottom: 1.25rem;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            color: rgba(248,249,250,0.6);
-        }
-
-        .footer-section p,
-        .footer-section a {
-            color: var(--gray);
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.65rem;
-            transition: color 0.3s ease;
-            font-size: 0.93rem;
-            line-height: 1.7;
-        }
-
-        .footer-section a:hover {
-            color: var(--primary);
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 0.85rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            color: var(--gray);
-            font-size: 0.93rem;
-        }
-
-        .contact-icon {
-            color: var(--primary);
-            font-size: 1.1rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-        }
-
-        .social-link {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--light);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            font-size: 1rem;
-        }
-
-        .social-link:hover {
-            background: var(--primary);
-            border-color: var(--primary);
-            transform: translateY(-3px);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.07);
-            color: var(--gray);
-            font-size: 0.82rem;
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.35);
         }
 
         /* Hamburger */
@@ -546,20 +114,18 @@
             transition: all 0.3s ease;
         }
         .mobile-menu {
-            display: none;
             position: fixed;
-            top: 72px;
+            top: 68px;
             left: 0;
             right: 0;
-            background: rgba(10, 14, 39, 0.98);
+            background: rgba(11, 15, 26, 0.99);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255,51,102,0.15);
+            border-bottom: 1px solid rgba(37,99,235,0.15);
             padding: 1.5rem 2rem;
             flex-direction: column;
             gap: 1.25rem;
             z-index: 999;
         }
-        .mobile-menu.open { display: flex; }
         .mobile-menu a {
             color: var(--light);
             text-decoration: none;
@@ -567,33 +133,412 @@
             font-weight: 500;
             padding: 0.5rem 0;
             border-bottom: 1px solid rgba(255,255,255,0.06);
+            display: block;
         }
         .mobile-menu a:last-child { border-bottom: none; }
         .mobile-menu .cta-btn { text-align: center; margin-top: 0.5rem; border-bottom: none; }
 
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 80px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(37, 99, 235, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            font-family: 'DM Sans', sans-serif;
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(37,99,235,0.12), rgba(16,185,129,0.12));
+            border: 1px solid rgba(37,99,235,0.35);
+            color: #93C5FD;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.78rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .hero-headline-serif {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: clamp(2.8rem, 7vw, 5.5rem);
+            line-height: 1.08;
+            letter-spacing: -0.02em;
+            display: block;
+            margin-bottom: 0.2em;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--gray);
+            max-width: 560px;
+            margin-bottom: 2rem;
+            line-height: 1.85;
+            font-weight: 300;
+        }
+
+        h1 {
+            margin-bottom: 1.25rem;
+        }
+
+        /* Services */
+        .services {
+            padding: 8rem 0;
+            position: relative;
+        }
+
+        .section-tag {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            display: block;
+            text-align: center;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: center;
+            letter-spacing: -0.01em;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray);
+            font-size: 1.05rem;
+            max-width: 560px;
+            margin: 0 auto 5rem;
+            line-height: 1.8;
+        }
+
+        .section-divider {
+            width: 50px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            margin: 0 auto 1.5rem;
+            border-radius: 2px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: rgba(37, 99, 235, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 24px;
+            padding: 2.75rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transform: scaleX(0);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(37, 99, 235, 0.3);
+            box-shadow: 0 24px 60px rgba(0,0,0,0.4), 0 0 40px rgba(37, 99, 235, 0.08);
+        }
+
+        .service-card:hover::before { transform: scaleX(1); }
+
+        .service-icon { font-size: 2.25rem; margin-bottom: 1.25rem; }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 0.875rem;
+            letter-spacing: -0.01em;
+        }
+
+        .service-card p {
+            color: var(--gray);
+            line-height: 1.85;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .service-features { list-style: none; }
+
+        .service-features li {
+            color: rgba(249,250,251,0.7);
+            margin-bottom: 0.6rem;
+            padding-left: 1.5rem;
+            position: relative;
+            font-size: 0.9rem;
+        }
+
+        .service-features li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 8rem 0;
+            background: linear-gradient(180deg, transparent, rgba(37, 99, 235, 0.03), transparent);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.75rem;
+            margin-top: 4rem;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(37, 99, 235, 0.25);
+            transform: translateY(-4px);
+        }
+
+        .testimonial-stars {
+            color: #FFB800;
+            font-size: 1.1rem;
+            margin-bottom: 1.25rem;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            color: rgba(249,250,251,0.85);
+            font-size: 1rem;
+            line-height: 1.85;
+            margin-bottom: 2rem;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.95rem;
+            font-family: 'DM Sans', sans-serif;
+            flex-shrink: 0;
+        }
+
+        .author-info h4 {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            margin-bottom: 0.2rem;
+            font-size: 0.93rem;
+        }
+
+        .author-info p { color: var(--gray); font-size: 0.8rem; }
+
+        /* CTA */
+        .cta-section { padding: 8rem 0; text-align: center; }
+
+        .cta-box {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(16, 185, 129, 0.06));
+            border: 1px solid rgba(37, 99, 235, 0.2);
+            border-radius: 32px;
+            padding: 5rem 3rem;
+            max-width: 860px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-box::after {
+            content: '';
+            position: absolute;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(circle at 50% 50%, rgba(37,99,235,0.05), transparent 60%);
+            pointer-events: none;
+        }
+
+        .cta-box h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        .cta-box p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 2.5rem;
+            max-width: 520px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0,0,0,0.3);
+            border-top: 1px solid rgba(255,255,255,0.07);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(249,250,251,0.5);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: var(--gray);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.65rem;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .footer-section a:hover { color: var(--primary); }
+
+        .contact-info { display: flex; flex-direction: column; gap: 0.85rem; }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .contact-icon { color: var(--primary); }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.07);
+            color: var(--gray);
+            font-size: 0.82rem;
+        }
+
         /* Responsive */
+        @media (max-width: 1024px) {
+            .services-grid { grid-template-columns: 1fr 1fr; }
+            .testimonials-grid { grid-template-columns: 1fr 1fr; }
+        }
+
         @media (max-width: 768px) {
             .services-grid { grid-template-columns: 1fr; }
             .testimonials-grid { grid-template-columns: 1fr; }
-            .hero-headline-serif { font-size: 2.4rem; }
-            .cta-box { padding: 3rem 1.75rem; }
+            .hero-headline-serif { font-size: 2.3rem; }
+            .cta-box { padding: 3rem 1.5rem; }
             .nav-links { display: none; }
             .hamburger { display: flex; }
-            .hero { padding-top: 100px; }
+            .hero { padding-top: 80px; min-height: auto; padding-bottom: 4rem; }
             .hero p { font-size: 1rem; }
-            .section-title { font-size: 2rem; }
+            .section-title { font-size: 1.9rem; }
+            .services { padding: 5rem 0; }
+            .testimonials { padding: 5rem 0; }
+            .cta-section { padding: 5rem 0; }
         }
-
-        /* Scroll animations */
-        .scroll-reveal {
-            
-            
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        .scroll-reveal.active { opacity: 1; transform: translateY(0); }
-        .scroll-reveal-delay-1 { transition-delay: 0.15s; }
-        .scroll-reveal-delay-2 { transition-delay: 0.3s; }
-        .scroll-reveal-delay-3 { transition-delay: 0.45s; }
 
         html { scroll-behavior: smooth; }
     </style>
@@ -602,15 +547,16 @@
     <header>
         <nav>
             <div class="logo">Flow<span>Scale</span></div>
-            <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button><div class="nav-links">
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+            <div class="nav-links">
                 <a href="#services">Services</a>
                 <a href="websites.html">Websites</a>
-                
                 <a href="strategy.html" class="cta-btn">Get In Touch</a>
             </div>
         </nav>
     </header>
-    <div class="mobile-menu" id="mobileMenu">
+
+    <div class="mobile-menu" id="mobileMenu" style="display:none;">
         <a href="#services" onclick="closeMenu()">Services</a>
         <a href="websites.html" onclick="closeMenu()">Websites</a>
         <a href="strategy.html" class="cta-btn" onclick="closeMenu()">Get In Touch</a>
@@ -619,13 +565,13 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-badge">✦ Marketing Specialists for UK Plumbing & Heating</div>
+                <div class="hero-badge">✦ Marketing Specialists for UK Trades</div>
                 <h1>
-                    <span class="hero-headline-serif">Scale Your Plumbing</span>
+                    <span class="hero-headline-serif">Scale Your Trade</span>
                     <span class="hero-headline-serif">Business <span class="gradient-text">With Confidence</span></span>
                 </h1>
                 <p>
-                    Reliable digital marketing solutions for UK plumbers, bathroom fitters, and heating engineers. 
+                    Reliable digital marketing solutions for UK plumbers, electricians, builders, and heating engineers.
                     We specialise in fast-turnaround campaigns that drive real, measurable results.
                 </p>
                 <a href="#services" class="cta-btn">See Our Services</a>
@@ -635,35 +581,19 @@
 
     <section id="services" class="services">
         <div class="container">
-            <span class="section-tag scroll-reveal">What We Do</span>
-            <h2 class="section-title scroll-reveal">Marketing Services</h2>
-            <div class="section-divider scroll-reveal"></div>
-            <p class="section-subtitle scroll-reveal">
-                Fast-deployment solutions for plumbers, bathroom fitters, and heating engineers across the UK
+            <span class="section-tag">What We Do</span>
+            <h2 class="section-title">Marketing Services</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">
+                Fast-deployment solutions for trade businesses across the UK
             </p>
 
             <div class="services-grid">
-                <div class="service-card scroll-reveal scroll-reveal-delay-1">
-                    <div class="service-icon">🔍</div>
-                    <h3>Google SEO</h3>
-                    <p>
-                        Strategic SEO built specifically for trade businesses. We help your plumbing business rank higher in local search — getting you in front of customers who are ready to book.
-                    </p>
-                    <ul class="service-features">
-                        <li>In-depth site audits & fixes</li>
-                        <li>Keyword research & targeting</li>
-                        <li>Technical SEO improvements</li>
-                        <li>Content optimisation & creation</li>
-                        <li>Local SEO & Google Business Profile</li>
-                        <li>Ongoing ranking monitoring</li>
-                    </ul>
-                </div>
-
-                <div class="service-card scroll-reveal scroll-reveal-delay-2">
+                <div class="service-card">
                     <div class="service-icon">📱</div>
                     <h3>Meta Ads</h3>
                     <p>
-                        Targeted campaigns across Facebook and Instagram that put your plumbing services in front of the right local audience — built for speed and built to convert.
+                        Targeted campaigns across Facebook and Instagram that put your services in front of the right local audience — built for speed and built to convert.
                     </p>
                     <ul class="service-features">
                         <li>Rapid campaign launch</li>
@@ -675,7 +605,7 @@
                     </ul>
                 </div>
 
-                <div class="service-card scroll-reveal scroll-reveal-delay-1">
+                <div class="service-card">
                     <div class="service-icon">🌐</div>
                     <h3>Website Design</h3>
                     <p>
@@ -691,11 +621,11 @@
                     </ul>
                 </div>
 
-                <div class="service-card scroll-reveal scroll-reveal-delay-2">
+                <div class="service-card">
                     <div class="service-icon">📊</div>
                     <h3>Google Ads</h3>
                     <p>
-                        Pay-per-click campaigns that target high-intent customers searching for plumbers in your area right now. Maximum visibility, minimum wasted spend.
+                        Pay-per-click campaigns that target high-intent customers searching for tradespeople in your area right now. Maximum visibility, minimum wasted spend.
                     </p>
                     <ul class="service-features">
                         <li>Keyword strategy & bid management</li>
@@ -712,15 +642,15 @@
 
     <section id="testimonials" class="testimonials">
         <div class="container">
-            <span class="section-tag scroll-reveal">Client Stories</span>
-            <h2 class="section-title scroll-reveal">What Our Clients Say</h2>
-            <div class="section-divider scroll-reveal"></div>
-            <p class="section-subtitle scroll-reveal">
-                Real results from plumbing and heating businesses across the UK
+            <span class="section-tag">Client Stories</span>
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="section-divider"></div>
+            <p class="section-subtitle">
+                Real results from trade businesses across the UK
             </p>
 
             <div class="testimonials-grid">
-                <div class="testimonial-card scroll-reveal scroll-reveal-delay-1">
+                <div class="testimonial-card">
                     <div class="testimonial-stars">★★★★★</div>
                     <p class="testimonial-text">
                         "Flow Scale launched our campaign quickly and professionally. Within 48 hours we had triple the boiler installation leads we were getting before. Couldn't recommend them more highly."
@@ -734,7 +664,7 @@
                     </div>
                 </div>
 
-                <div class="testimonial-card scroll-reveal scroll-reveal-delay-2">
+                <div class="testimonial-card">
                     <div class="testimonial-stars">★★★★★</div>
                     <p class="testimonial-text">
                         "Our SEO was underperforming and we needed a team who actually understood the trade industry. Flow Scale got us back on page one for 'bathroom fitters Manchester' within weeks. Incredible service."
@@ -748,7 +678,7 @@
                     </div>
                 </div>
 
-                <div class="testimonial-card scroll-reveal scroll-reveal-delay-3">
+                <div class="testimonial-card">
                     <div class="testimonial-stars">★★★★★</div>
                     <p class="testimonial-text">
                         "Flow Scale built us a new website and it genuinely exceeded our expectations. It looks completely professional, loads fast, and we've already had multiple enquiries come through the contact form. Well worth every penny."
@@ -767,7 +697,7 @@
 
     <section class="cta-section">
         <div class="container">
-            <div class="cta-box scroll-reveal">
+            <div class="cta-box">
                 <span class="section-tag" style="margin-bottom:1.25rem;">Let's Talk</span>
                 <h2>Ready to Grow Your Business?</h2>
                 <p>
@@ -782,15 +712,12 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <div class="logo" style="margin-bottom:1rem;">Flow<span style="color:var(--primary);">Scale</span></div>
-                    <p>
-                        Digital marketing solutions for UK plumbers, bathroom fitters, and heating engineers who want to grow their business with confidence.
-                    </p>
+                    <div class="logo" style="margin-bottom:1rem; font-family:'Syne',sans-serif; font-size:1.4rem; font-weight:800;">Flow<span style="color:var(--primary);">Scale</span></div>
+                    <p>Digital marketing solutions for UK trade businesses who want to grow with confidence.</p>
                 </div>
 
                 <div class="footer-section">
                     <h3>Services</h3>
-                    <a href="#services">Google SEO</a>
                     <a href="#services">Meta Ads</a>
                     <a href="#services">Google Ads</a>
                     <a href="websites.html">Website Design</a>
@@ -805,7 +732,7 @@
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">📧</span>
-                            <span>jenson@flowscalemarketing.co.uk</span>
+                            <span>jenson@flow<span><a href="mailto:jenson@flowscalemarketing.co.uk" style="color: var(--gray); text-decoration: none;">jenson@flowscalemarketing.co.uk</a></span>scalemarketing.co.uk</span>
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">🕐</span>
@@ -825,9 +752,18 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const revealElements = document.querySelectorAll('.scroll-reveal');
-            const revealOnScroll = () => {
-                revealElements.forEach(el => {
-                    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+    <script>
+        var menuOpen = false;
+        var menuEl = document.getElementById('mobileMenu');
+        function toggleMenu() {
+            menuOpen = !menuOpen;
+            menuEl.style.display = menuOpen ? 'flex' : 'none';
+            menuEl.style.flexDirection = 'column';
+        }
+        function closeMenu() {
+            menuOpen = false;
+            menuEl.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -9,10 +9,10 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
-            --primary: #FF3366;
-            --dark: #0A0E27;
-            --light: #F8F9FA;
-            --accent: #00D9FF;
+            --primary: #2563EB;
+            --dark: #0B0F1A;
+            --light: #F9FAFB;
+            --accent: #10B981;
             --gray: #6B7280;
         }
 
@@ -35,9 +35,9 @@
             top: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(10, 14, 39, 0.95);
+            background: rgba(11, 15, 26, 0.96);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 51, 102, 0.1);
+            border-bottom: 1px solid rgba(37, 99, 235, 0.15);
         }
 
         nav {
@@ -92,9 +92,9 @@
         }
 
         .cta-btn:hover {
-            background: #E62958;
+            background: #1d4ed8;
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(255, 51, 102, 0.3);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.35);
         }
 
         /* Page layout */
@@ -112,8 +112,8 @@
             position: absolute;
             inset: 0;
             background:
-                radial-gradient(circle at 15% 50%, rgba(255, 51, 102, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 85% 30%, rgba(0, 217, 255, 0.07) 0%, transparent 50%);
+                radial-gradient(circle at 15% 50%, rgba(37, 99, 235, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 85% 30%, rgba(16, 185, 129, 0.06) 0%, transparent 50%);
             pointer-events: none;
         }
 
@@ -183,7 +183,7 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: var(--primary);
+            background: var(--accent);
             margin-top: 7px;
             flex-shrink: 0;
         }
@@ -287,7 +287,7 @@
         .field input:focus,
         .field select:focus,
         .field textarea:focus {
-            border-color: rgba(255,51,102,0.5);
+            border-color: rgba(37,99,235,0.5);
             background: rgba(255,255,255,0.07);
         }
 
@@ -329,7 +329,7 @@
         }
 
         .submit-btn:hover {
-            background: #E62958;
+            background: #1d4ed8;
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(255,51,102,0.3);
         }
@@ -353,8 +353,8 @@
             width: 64px;
             height: 64px;
             border-radius: 50%;
-            background: linear-gradient(135deg, rgba(255,51,102,0.2), rgba(0,217,255,0.2));
-            border: 1px solid rgba(255,51,102,0.3);
+            background: linear-gradient(135deg, rgba(37,99,235,0.2), rgba(16,185,129,0.2));
+            border: 1px solid rgba(37,99,235,0.3);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -413,9 +413,9 @@
             top: 72px;
             left: 0;
             right: 0;
-            background: rgba(10, 14, 39, 0.98);
+            background: rgba(11, 15, 26, 0.99);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255,51,102,0.15);
+            border-bottom: 1px solid rgba(37, 99, 235, 0.15);
             padding: 1.5rem 2rem;
             flex-direction: column;
             gap: 1.25rem;
@@ -457,7 +457,7 @@
             </div>
         </nav>
     </header>
-    <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu" id="mobileMenu" style="display:none;">
         <a href="index.html" onclick="closeMenu()">Home</a>
         <a href="index.html#services" onclick="closeMenu()">Services</a>
         <a href="websites.html" onclick="closeMenu()">Websites</a>
@@ -503,7 +503,7 @@
                             </div>
                             <div class="contact-item">
                                 <span class="contact-icon">📧</span>
-                                <span>jenson@flowscalemarketing.co.uk</span>
+                                <span><a href="mailto:jenson@flowscalemarketing.co.uk" style="color: var(--gray); text-decoration: none;">jenson@flowscalemarketing.co.uk</a></span>
                             </div>
                             <div class="contact-item">
                                 <span class="contact-icon">🕐</span>
