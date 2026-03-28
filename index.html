@@ -11,7 +11,7 @@
             padding: 0;
             box-sizing: border-box;
         }
- 
+
         :root {
             --primary: #FF3366;
             --dark: #0A0E27;
@@ -19,20 +19,20 @@
             --accent: #00D9FF;
             --gray: #6B7280;
         }
- 
+
         body {
             font-family: 'Work Sans', sans-serif;
             background: var(--dark);
             color: var(--light);
             overflow-x: hidden;
         }
- 
+
         .container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
         }
- 
+
         /* Header */
         header {
             position: fixed;
@@ -43,7 +43,7 @@
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255, 51, 102, 0.1);
         }
- 
+
         nav {
             display: flex;
             justify-content: space-between;
@@ -52,7 +52,7 @@
             max-width: 1400px;
             margin: 0 auto;
         }
- 
+
         .logo {
             font-family: 'Syne', sans-serif;
             font-size: 1.5rem;
@@ -60,17 +60,17 @@
             color: var(--light);
             letter-spacing: -0.02em;
         }
- 
+
         .logo span {
             color: var(--primary);
         }
- 
+
         .nav-links {
             display: flex;
             gap: 2.5rem;
             align-items: center;
         }
- 
+
         .nav-links a {
             color: var(--light);
             text-decoration: none;
@@ -78,11 +78,11 @@
             transition: color 0.3s ease;
             font-size: 0.95rem;
         }
- 
+
         .nav-links a:hover {
             color: var(--primary);
         }
- 
+
         .cta-btn {
             font-family: 'DM Sans', sans-serif;
             background: var(--primary);
@@ -97,13 +97,13 @@
             text-decoration: none;
             display: inline-block;
         }
- 
+
         .cta-btn:hover {
             background: #E62958;
             transform: translateY(-2px);
             box-shadow: 0 10px 30px rgba(255, 51, 102, 0.3);
         }
- 
+
         /* Hero Section */
         .hero {
             min-height: 100vh;
@@ -113,7 +113,7 @@
             padding-top: 125px;
             overflow: hidden;
         }
- 
+
         .hero::before {
             content: '';
             position: absolute;
@@ -126,18 +126,18 @@
                 radial-gradient(circle at 80% 80%, rgba(0, 217, 255, 0.1) 0%, transparent 50%);
             pointer-events: none;
         }
- 
+
         .hero-content {
             position: relative;
             z-index: 2;
             animation: fadeInUp 1s ease-out;
         }
- 
+
         @keyframes fadeInUp {
             from {  transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
- 
+
         .hero-badge {
             font-family: 'DM Sans', sans-serif;
             display: inline-block;
@@ -152,7 +152,7 @@
             letter-spacing: 0.08em;
             text-transform: uppercase;
         }
- 
+
         h1 {
             font-size: clamp(3rem, 8vw, 6rem);
             font-weight: 800;
@@ -160,7 +160,7 @@
             margin-bottom: 1.5rem;
             letter-spacing: -0.03em;
         }
- 
+
         /* Playfair Display for the hero headline — elegant contrast */
         .hero-headline-serif {
             font-family: 'Playfair Display', serif;
@@ -171,14 +171,14 @@
             display: block;
             margin-bottom: 0.3em;
         }
- 
+
         .gradient-text {
             background: linear-gradient(135deg, var(--primary), var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
- 
+
         .hero p {
             font-size: 1.2rem;
             color: var(--gray);
@@ -187,13 +187,13 @@
             line-height: 1.85;
             font-weight: 300;
         }
- 
+
         /* Services Section */
         .services {
             padding: 8rem 0;
             position: relative;
         }
- 
+
         .section-tag {
             font-family: 'DM Sans', sans-serif;
             font-size: 0.75rem;
@@ -205,7 +205,7 @@
             display: block;
             text-align: center;
         }
- 
+
         .section-title {
             font-family: 'Playfair Display', serif;
             font-size: clamp(2.2rem, 4vw, 3.5rem);
@@ -214,7 +214,7 @@
             text-align: center;
             letter-spacing: -0.01em;
         }
- 
+
         .section-subtitle {
             text-align: center;
             color: var(--gray);
@@ -223,13 +223,13 @@
             margin: 0 auto 5rem;
             line-height: 1.8;
         }
- 
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
             gap: 2rem;
         }
- 
+
         .service-card {
             background: linear-gradient(135deg, rgba(255, 51, 102, 0.04), rgba(0, 217, 255, 0.04));
             border: 1px solid rgba(255, 255, 255, 0.08);
@@ -239,7 +239,7 @@
             position: relative;
             overflow: hidden;
         }
- 
+
         .service-card::before {
             content: '';
             position: absolute;
@@ -251,22 +251,22 @@
             transform: scaleX(0);
             transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
- 
+
         .service-card:hover {
             transform: translateY(-8px);
             border-color: rgba(255, 51, 102, 0.25);
             box-shadow: 0 24px 60px rgba(0,0,0,0.4), 0 0 40px rgba(255, 51, 102, 0.08);
         }
- 
+
         .service-card:hover::before {
             transform: scaleX(1);
         }
- 
+
         .service-icon {
             font-size: 2.5rem;
             margin-bottom: 1.5rem;
         }
- 
+
         .service-card h3 {
             font-family: 'Playfair Display', serif;
             font-size: 1.9rem;
@@ -274,18 +274,18 @@
             margin-bottom: 1rem;
             letter-spacing: -0.01em;
         }
- 
+
         .service-card p {
             color: var(--gray);
             line-height: 1.85;
             margin-bottom: 1.75rem;
             font-size: 0.98rem;
         }
- 
+
         .service-features {
             list-style: none;
         }
- 
+
         .service-features li {
             color: rgba(248,249,250,0.7);
             margin-bottom: 0.65rem;
@@ -293,7 +293,7 @@
             position: relative;
             font-size: 0.93rem;
         }
- 
+
         .service-features li::before {
             content: '→';
             position: absolute;
@@ -301,7 +301,7 @@
             color: var(--primary);
             font-weight: bold;
         }
- 
+
         /* Divider */
         .section-divider {
             width: 60px;
@@ -310,20 +310,20 @@
             margin: 0 auto 1.5rem;
             border-radius: 2px;
         }
- 
+
         /* Testimonials Section */
         .testimonials {
             padding: 8rem 0;
             background: linear-gradient(180deg, transparent, rgba(255, 51, 102, 0.03), transparent);
         }
- 
+
         .testimonials-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 1.75rem;
             margin-top: 4rem;
         }
- 
+
         .testimonial-card {
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid rgba(255, 255, 255, 0.08);
@@ -331,20 +331,20 @@
             padding: 2.5rem;
             transition: all 0.3s ease;
         }
- 
+
         .testimonial-card:hover {
             background: rgba(255, 255, 255, 0.04);
             border-color: rgba(255, 51, 102, 0.25);
             transform: translateY(-4px);
         }
- 
+
         .testimonial-stars {
             color: #FFB800;
             font-size: 1.1rem;
             margin-bottom: 1.25rem;
             letter-spacing: 2px;
         }
- 
+
         .testimonial-text {
             color: rgba(248,249,250,0.85);
             font-size: 1rem;
@@ -354,13 +354,13 @@
             font-family: 'Work Sans', sans-serif;
             font-weight: 300;
         }
- 
+
         .testimonial-author {
             display: flex;
             align-items: center;
             gap: 1rem;
         }
- 
+
         .author-avatar {
             width: 48px;
             height: 48px;
@@ -374,25 +374,25 @@
             font-family: 'DM Sans', sans-serif;
             flex-shrink: 0;
         }
- 
+
         .author-info h4 {
             font-family: 'DM Sans', sans-serif;
             font-weight: 700;
             margin-bottom: 0.2rem;
             font-size: 0.95rem;
         }
- 
+
         .author-info p {
             color: var(--gray);
             font-size: 0.82rem;
         }
- 
+
         /* CTA Section */
         .cta-section {
             padding: 8rem 0;
             text-align: center;
         }
- 
+
         .cta-box {
             background: linear-gradient(135deg, rgba(255, 51, 102, 0.08), rgba(0, 217, 255, 0.08));
             border: 1px solid rgba(255, 51, 102, 0.18);
@@ -403,7 +403,7 @@
             position: relative;
             overflow: hidden;
         }
- 
+
         .cta-box::after {
             content: '';
             position: absolute;
@@ -414,7 +414,7 @@
             background: radial-gradient(circle at 50% 50%, rgba(255,51,102,0.06), transparent 60%);
             pointer-events: none;
         }
- 
+
         .cta-box h2 {
             font-family: 'Playfair Display', serif;
             font-size: clamp(2rem, 4vw, 3.2rem);
@@ -422,7 +422,7 @@
             margin-bottom: 1.25rem;
             letter-spacing: -0.02em;
         }
- 
+
         .cta-box p {
             font-size: 1.15rem;
             color: var(--gray);
@@ -432,21 +432,21 @@
             margin-right: auto;
             line-height: 1.8;
         }
- 
+
         /* Footer */
         footer {
             background: rgba(0, 0, 0, 0.3);
             border-top: 1px solid rgba(255, 255, 255, 0.07);
             padding: 4rem 0 2rem;
         }
- 
+
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 3rem;
             margin-bottom: 3rem;
         }
- 
+
         .footer-section h3 {
             font-family: 'DM Sans', sans-serif;
             font-size: 1rem;
@@ -456,7 +456,7 @@
             text-transform: uppercase;
             color: rgba(248,249,250,0.6);
         }
- 
+
         .footer-section p,
         .footer-section a {
             color: var(--gray);
@@ -467,17 +467,17 @@
             font-size: 0.93rem;
             line-height: 1.7;
         }
- 
+
         .footer-section a:hover {
             color: var(--primary);
         }
- 
+
         .contact-info {
             display: flex;
             flex-direction: column;
             gap: 0.85rem;
         }
- 
+
         .contact-item {
             display: flex;
             align-items: center;
@@ -485,19 +485,19 @@
             color: var(--gray);
             font-size: 0.93rem;
         }
- 
+
         .contact-icon {
             color: var(--primary);
             font-size: 1.1rem;
         }
- 
+
         .social-links {
             display: flex;
             gap: 1rem;
             justify-content: center;
             margin-bottom: 1.5rem;
         }
- 
+
         .social-link {
             width: 42px;
             height: 42px;
@@ -512,13 +512,13 @@
             transition: all 0.3s ease;
             font-size: 1rem;
         }
- 
+
         .social-link:hover {
             background: var(--primary);
             border-color: var(--primary);
             transform: translateY(-3px);
         }
- 
+
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
@@ -526,17 +526,64 @@
             color: var(--gray);
             font-size: 0.82rem;
         }
- 
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+            background: none;
+            border: none;
+        }
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--light);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 72px;
+            left: 0;
+            right: 0;
+            background: rgba(10, 14, 39, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,51,102,0.15);
+            padding: 1.5rem 2rem;
+            flex-direction: column;
+            gap: 1.25rem;
+            z-index: 999;
+        }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a {
+            color: var(--light);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .mobile-menu a:last-child { border-bottom: none; }
+        .mobile-menu .cta-btn { text-align: center; margin-top: 0.5rem; border-bottom: none; }
+
         /* Responsive */
         @media (max-width: 768px) {
             .services-grid { grid-template-columns: 1fr; }
             .testimonials-grid { grid-template-columns: 1fr; }
-            .hero-headline-serif { font-size: 2.8rem; }
+            .hero-headline-serif { font-size: 2.4rem; }
             .cta-box { padding: 3rem 1.75rem; }
-            .nav-links { gap: 1rem; }
-            .nav-links a:not(.cta-btn) { display: none; }
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .hero { padding-top: 100px; }
+            .hero p { font-size: 1rem; }
+            .section-title { font-size: 2rem; }
         }
- 
+
         /* Scroll animations */
         .scroll-reveal {
             
@@ -547,7 +594,7 @@
         .scroll-reveal-delay-1 { transition-delay: 0.15s; }
         .scroll-reveal-delay-2 { transition-delay: 0.3s; }
         .scroll-reveal-delay-3 { transition-delay: 0.45s; }
- 
+
         html { scroll-behavior: smooth; }
     </style>
 </head>
@@ -555,15 +602,20 @@
     <header>
         <nav>
             <div class="logo">Flow<span>Scale</span></div>
-            <div class="nav-links">
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button><div class="nav-links">
                 <a href="#services">Services</a>
                 <a href="websites.html">Websites</a>
-                <a href="#testimonials">Testimonials</a>
-                <a href="#contact" class="cta-btn">Get In Touch</a>
+                
+                <a href="strategy.html" class="cta-btn">Get In Touch</a>
             </div>
         </nav>
     </header>
- 
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#services" onclick="closeMenu()">Services</a>
+        <a href="websites.html" onclick="closeMenu()">Websites</a>
+        <a href="strategy.html" class="cta-btn" onclick="closeMenu()">Get In Touch</a>
+    </div>
+
     <section class="hero">
         <div class="container">
             <div class="hero-content">
@@ -580,7 +632,7 @@
             </div>
         </div>
     </section>
- 
+
     <section id="services" class="services">
         <div class="container">
             <span class="section-tag scroll-reveal">What We Do</span>
@@ -589,7 +641,7 @@
             <p class="section-subtitle scroll-reveal">
                 Fast-deployment solutions for plumbers, bathroom fitters, and heating engineers across the UK
             </p>
- 
+
             <div class="services-grid">
                 <div class="service-card scroll-reveal scroll-reveal-delay-1">
                     <div class="service-icon">🔍</div>
@@ -606,7 +658,7 @@
                         <li>Ongoing ranking monitoring</li>
                     </ul>
                 </div>
- 
+
                 <div class="service-card scroll-reveal scroll-reveal-delay-2">
                     <div class="service-icon">📱</div>
                     <h3>Meta Ads</h3>
@@ -622,7 +674,7 @@
                         <li>Conversion tracking & analytics</li>
                     </ul>
                 </div>
- 
+
                 <div class="service-card scroll-reveal scroll-reveal-delay-1">
                     <div class="service-icon">🌐</div>
                     <h3>Website Design</h3>
@@ -638,7 +690,7 @@
                         <li>Ongoing support & updates</li>
                     </ul>
                 </div>
- 
+
                 <div class="service-card scroll-reveal scroll-reveal-delay-2">
                     <div class="service-icon">📊</div>
                     <h3>Google Ads</h3>
@@ -657,7 +709,7 @@
             </div>
         </div>
     </section>
- 
+
     <section id="testimonials" class="testimonials">
         <div class="container">
             <span class="section-tag scroll-reveal">Client Stories</span>
@@ -666,7 +718,7 @@
             <p class="section-subtitle scroll-reveal">
                 Real results from plumbing and heating businesses across the UK
             </p>
- 
+
             <div class="testimonials-grid">
                 <div class="testimonial-card scroll-reveal scroll-reveal-delay-1">
                     <div class="testimonial-stars">★★★★★</div>
@@ -681,7 +733,7 @@
                         </div>
                     </div>
                 </div>
- 
+
                 <div class="testimonial-card scroll-reveal scroll-reveal-delay-2">
                     <div class="testimonial-stars">★★★★★</div>
                     <p class="testimonial-text">
@@ -695,7 +747,7 @@
                         </div>
                     </div>
                 </div>
- 
+
                 <div class="testimonial-card scroll-reveal scroll-reveal-delay-3">
                     <div class="testimonial-stars">★★★★★</div>
                     <p class="testimonial-text">
@@ -712,7 +764,7 @@
             </div>
         </div>
     </section>
- 
+
     <section class="cta-section">
         <div class="container">
             <div class="cta-box scroll-reveal">
@@ -725,7 +777,7 @@
             </div>
         </div>
     </section>
- 
+
     <footer id="contact">
         <div class="container">
             <div class="footer-content">
@@ -735,7 +787,7 @@
                         Digital marketing solutions for UK plumbers, bathroom fitters, and heating engineers who want to grow their business with confidence.
                     </p>
                 </div>
- 
+
                 <div class="footer-section">
                     <h3>Services</h3>
                     <a href="#services">Google SEO</a>
@@ -743,7 +795,7 @@
                     <a href="#services">Google Ads</a>
                     <a href="websites.html">Website Design</a>
                 </div>
- 
+
                 <div class="footer-section">
                     <h3>Contact</h3>
                     <div class="contact-info">
@@ -753,7 +805,7 @@
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">📧</span>
-                            <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="85efe0ebf6eaebc5e3e9eaf2f6e6e4e9e0e8e4f7eee0f1ecebe2abe6eaabf0ee">[email&#160;protected]</a></span>
+                            <span>jenson@flowscalemarketing.co.uk</span>
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">🕐</span>
@@ -762,19 +814,17 @@
                     </div>
                 </div>
             </div>
- 
+
             <div class="footer-bottom">
                 <div class="social-links">
-                    <a href="#" class="social-link" aria-label="Facebook">f</a>
-                    <a href="#" class="social-link" aria-label="Instagram">📷</a>
-                    <a href="#" class="social-link" aria-label="LinkedIn">in</a>
-                    <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+                    <a href="https://www.facebook.com/profile.php?id=61586959557258" class="social-link" aria-label="Facebook" target="_blank">f</a>
+                    <a href="https://www.instagram.com/flowscalemarketing/" class="social-link" aria-label="Instagram" target="_blank">📷</a>
                 </div>
                 <p>&copy; 2026 Flow Scale Marketing. All rights reserved.</p>
             </div>
         </div>
     </footer>
- 
+
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         document.addEventListener('DOMContentLoaded', function() {
             const revealElements = document.querySelectorAll('.scroll-reveal');

@@ -977,6 +977,50 @@
         html { scroll-behavior: smooth; }
 
         /* Responsive */
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+            background: none;
+            border: none;
+        }
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--light);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 72px;
+            left: 0;
+            right: 0;
+            background: rgba(10, 14, 39, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,51,102,0.15);
+            padding: 1.5rem 2rem;
+            flex-direction: column;
+            gap: 1.25rem;
+            z-index: 999;
+        }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a {
+            color: var(--light);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .mobile-menu a:last-child { border-bottom: none; }
+        .mobile-menu .cta-btn { text-align: center; margin-top: 0.5rem; border-bottom: none; }
+
         @media (max-width: 1024px) {
             .included-grid { grid-template-columns: repeat(2, 1fr); }
             .process-steps { grid-template-columns: repeat(2, 1fr); }
@@ -991,9 +1035,15 @@
             .included-grid { grid-template-columns: 1fr; }
             .process-steps { grid-template-columns: 1fr; }
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
-            .nav-links a:not(.cta-btn) { display: none; }
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
             .hero-ctas { flex-direction: column; }
             .cta-box { padding: 3rem 1.75rem; }
+            .hero { padding-top: 90px; }
+            .hero-headline { font-size: 2.4rem; }
+            .section-title { font-size: 2rem; }
+            .browser-mockup { display: none; }
+            .why-layout { grid-template-columns: 1fr; gap: 2rem; }
         }
     </style>
 </head>
@@ -1001,14 +1051,20 @@
     <header>
         <nav>
             <a href="index.html" class="logo">Flow<span>Scale</span></a>
-            <div class="nav-links">
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button><div class="nav-links">
                 <a href="index.html#services">Services</a>
                 <a href="websites.html" class="active">Websites</a>
-                <a href="index.html#testimonials">Testimonials</a>
-                <a href="index.html#contact" class="cta-btn">Get In Touch</a>
+                
+                <a href="strategy.html" class="cta-btn">Get In Touch</a>
             </div>
         </nav>
     </header>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" onclick="closeMenu()">Home</a>
+        <a href="index.html#services" onclick="closeMenu()">Services</a>
+        <a href="websites.html" onclick="closeMenu()">Websites</a>
+        <a href="strategy.html" class="cta-btn" onclick="closeMenu()">Get In Touch</a>
+    </div>
 
     <!-- Hero -->
     <section class="hero">
@@ -1355,7 +1411,7 @@
                     <a href="index.html">Home</a>
                     <a href="index.html#services">Marketing Services</a>
                     <a href="websites.html">Website Design</a>
-                    <a href="index.html#testimonials">Testimonials</a>
+                    
                 </div>
                 <div class="footer-section">
                     <h3>Contact</h3>
@@ -1365,7 +1421,7 @@
                     </div>
                     <div class="contact-item">
                         <span class="contact-icon">📧</span>
-                        <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="771d121904181937111b18000414161b121a16051c12031e191059141859021c">[email&#160;protected]</a></span>
+                        <span>jenson@flowscalemarketing.co.uk</span>
                     </div>
                     <div class="contact-item">
                         <span class="contact-icon">🕐</span>
@@ -1375,10 +1431,8 @@
             </div>
             <div class="footer-bottom">
                 <div class="social-links">
-                    <a href="#" class="social-link">f</a>
-                    <a href="#" class="social-link">📷</a>
-                    <a href="#" class="social-link">in</a>
-                    <a href="#" class="social-link">𝕏</a>
+                    <a href="https://www.facebook.com/profile.php?id=61586959557258" class="social-link">f</a>
+                    <a href="https://www.instagram.com/flowscalemarketing/" class="social-link">📷</a>
                 </div>
                 <p>&copy; 2026 Flow Scale Marketing. All rights reserved.</p>
             </div>

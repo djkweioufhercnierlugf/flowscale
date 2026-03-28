@@ -440,12 +440,56 @@
             font-size: 0.82rem;
         }
 
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 4px;
+            background: none;
+            border: none;
+        }
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--light);
+            border-radius: 2px;
+        }
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 72px;
+            left: 0;
+            right: 0;
+            background: rgba(10, 14, 39, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,51,102,0.15);
+            padding: 1.5rem 2rem;
+            flex-direction: column;
+            gap: 1.25rem;
+            z-index: 999;
+        }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a {
+            color: var(--light);
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .mobile-menu a:last-child { border-bottom: none; }
+        .mobile-menu .cta-btn { text-align: center; margin-top: 0.5rem; border-bottom: none; }
         @media (max-width: 900px) {
             .page-grid { grid-template-columns: 1fr; gap: 3rem; }
             .page-info { padding-top: 0; }
             .field-row { grid-template-columns: 1fr; }
             .form-card { padding: 2rem 1.5rem; }
-            .nav-links a:not(.cta-btn) { display: none; }
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .package-option-text { flex-direction: column; gap: 0.25rem; }
         }
 
         html { scroll-behavior: smooth; }
@@ -456,7 +500,7 @@
     <header>
         <nav>
             <a href="index.html" class="logo">Flow<span>Scale</span></a>
-            <div class="nav-links">
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button><div class="nav-links">
                 <a href="index.html#services">Services</a>
                 <a href="websites.html">Websites</a>
                 <a href="index.html#testimonials">Testimonials</a>
@@ -464,6 +508,12 @@
             </div>
         </nav>
     </header>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" onclick="closeMenu()">Home</a>
+        <a href="index.html#services" onclick="closeMenu()">Services</a>
+        <a href="websites.html" onclick="closeMenu()">Websites</a>
+        <a href="strategy.html" class="cta-btn" onclick="closeMenu()">Get In Touch</a>
+    </div>
 
     <div class="page-wrapper">
         <div class="container">
@@ -504,7 +554,7 @@
                             </div>
                             <div class="contact-item">
                                 <span class="contact-icon">📧</span>
-                                <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6f050a011c00012f090300181c0c0e030a020e1d040a1b060108410c00411a04">[email&#160;protected]</a></span>
+                                <span>jenson@flowscalemarketing.co.uk</span>
                             </div>
                             <div class="contact-item">
                                 <span class="contact-icon">🕐</span>
@@ -631,5 +681,4 @@
             const email = document.getElementById('email').value.trim();
 
             if (!fname || !phone || !email) {
-                alert('Please fill in at least your name, phone number and email address.');
-                return;
+                alert('Please fill in at least your name, phone number and email addr
