@@ -1432,7 +1432,7 @@
                     </div>
                     <div class="contact-item">
                         <span class="contact-icon">📧</span>
-                        <span><a href="mailto:jenson@flowscalemarketing.co.uk" style="color:var(--gray);text-decoration:none;">jenson@flowscalemarketing.co.uk</a></span>
+                       <span><a href="mailto:jenson@flowscalemarketing.co.uk" style="color:var(--gray);text-decoration:none;">jenson@flowscalemarketing.co.uk</a></span>
                     </div>
                     <div class="contact-item">
                         <span class="contact-icon">🕐</span>
@@ -1443,7 +1443,7 @@
             <div class="footer-bottom">
                 <div class="social-links">
                     <a href="https://www.facebook.com/profile.php?id=61586959557258" class="social-link" aria-label="Facebook" target="_blank">f</a>
-                    <a href="https://www.instagram.com/flowscalemarketing/" class="social-link" aria-label="Instagram" target="_blank">📷</a>   
+                    <a href="https://www.instagram.com/flowscalemarketing/" class="social-link" aria-label="Instagram" target="_blank">📷</a>
                 </div>
                 <p>&copy; 2026 Flow Scale Marketing. All rights reserved.</p>
             </div>
@@ -1451,8 +1451,17 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const revealElements = document.querySelectorAll('.scroll-reveal');
-            const revealOnScroll = () => {
-                revealElements.forEach(el => {
-                    if (el.getBou
+        var menuOpen = false;
+        var menuEl = document.getElementById('mobileMenu');
+        function toggleMenu() {
+            menuOpen = !menuOpen;
+            menuEl.style.display = menuOpen ? 'flex' : 'none';
+            if (menuOpen) menuEl.style.flexDirection = 'column';
+        }
+        function closeMenu() {
+            menuOpen = false;
+            menuEl.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

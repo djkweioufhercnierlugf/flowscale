@@ -561,7 +561,7 @@
                             </div>
                             <div class="contact-item">
                                 <span class="contact-icon">📧</span>
-                                <span><a href="mailto:jenson@flowscalemarketing.co.uk" style="color:var(--gray);text-decoration:none;">jenson@flowscalemarketing.co.uk</a></span>
+                        <span><a href="mailto:jenson@flowscalemarketing.co.uk" style="color:var(--gray);text-decoration:none;">jenson@flowscalemarketing.co.uk</a></span>
                             </div>
                             <div class="contact-item">
                                 <span class="contact-icon">🕐</span>
@@ -677,15 +677,17 @@
     </footer>
 
     <script>
-        function selectPackage(el) {
-            document.querySelectorAll('.package-option').forEach(opt => opt.classList.remove('selected'));
-            el.classList.add('selected');
+        var menuOpen = false;
+        var menuEl = document.getElementById('mobileMenu');
+        function toggleMenu() {
+            menuOpen = !menuOpen;
+            menuEl.style.display = menuOpen ? 'flex' : 'none';
+            if (menuOpen) menuEl.style.flexDirection = 'column';
         }
-
-        function handleSubmit() {
-            const fname = document.getElementById('fname').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const email = document.getElementById('email').value.trim();
-
-            if (!fname || !phone || !email) {
-                alert('Please fill in at least your name, phone number and email address so we can get back to you.');
+        function closeMenu() {
+            menuOpen = false;
+            menuEl.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
