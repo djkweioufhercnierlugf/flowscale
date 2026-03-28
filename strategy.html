@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get In Touch | Flow Scale Marketing</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Syne:wght@400;600;700;800&family=Work+Sans:wght@300;400;500;600&family=DM+Sans:wght@700;800;900&display=swap" rel="stylesheet">
@@ -433,12 +436,16 @@
         .mobile-menu a:last-child { border-bottom: none; }
         .mobile-menu .cta-btn { text-align: center; margin-top: 0.5rem; border-bottom: none; }
         @media (max-width: 900px) {
-            .page-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .page-grid { grid-template-columns: 1fr; gap: 2rem; }
             .page-info { padding-top: 0; }
             .field-row { grid-template-columns: 1fr; }
-            .form-card { padding: 2rem 1.5rem; }
+            .form-card { padding: 1.75rem 1.25rem; }
             .nav-links { display: none; }
             .hamburger { display: flex; }
+            .page-wrapper { padding: 100px 0 3rem; }
+            .info-points { margin-bottom: 2rem; }
+            .page-info h1 { font-size: 2.1rem; }
+            .page-info p { font-size: 0.95rem; margin-bottom: 1.5rem; }
         }
 
         html { scroll-behavior: smooth; }
@@ -503,7 +510,7 @@
                             </div>
                             <div class="contact-item">
                                 <span class="contact-icon">📧</span>
-                                <span><a href="mailto:jenson@flowscalemarketing.co.uk" style="color: var(--gray); text-decoration: none;">jenson@flowscalemarketing.co.uk</a></span>
+                                <span><a href="mailto:jenson@flowscalemarketing.co.uk" style="color:var(--gray);text-decoration:none;">jenson@flowscalemarketing.co.uk</a></span>
                             </div>
                             <div class="contact-item">
                                 <span class="contact-icon">🕐</span>
@@ -586,11 +593,11 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         function handleSubmit() {
             const fname = document.getElementById('fname').value.trim();
             const phone = document.getElementById('phone').value.trim();
             const email = document.getElementById('email').value.trim();
 
             if (!fname || !phone || !email) {
-                alert('Please fill in at least your name, phone number and email addr
+                alert('Please fill in at least your name, phone number and email address so we can get back to you.');
