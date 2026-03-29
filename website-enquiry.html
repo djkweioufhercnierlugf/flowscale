@@ -561,7 +561,7 @@
                             </div>
                             <div class="contact-item">
                                 <span class="contact-icon">📧</span>
-                        <span><a href="mailto:jenson@flowscalemarketing.co.uk" style="color:var(--gray);text-decoration:none;">jenson@flowscalemarketing.co.uk</a></span>
+                                <span><a href="/cdn-cgi/l/email-protection#2d4748435e42436d4b41425a5e4e4c4148404c5f46485944434a034e42035846" style="color:var(--gray);text-decoration:none;"><span class="__cf_email__" data-cfemail="8fe5eae1fce0e1cfe9e3e0f8fceceee3eae2eefde4eafbe6e1e8a1ece0a1fae4">[email&#160;protected]</span></a></span>
                             </div>
                             <div class="contact-item">
                                 <span class="contact-icon">🕐</span>
@@ -580,33 +580,33 @@
                         <div class="field-row">
                             <div class="field">
                                 <label>First name</label>
-                                <input type="text" placeholder="e.g. James" id="fname" />
+                                <input type="text" name="first_name" placeholder="e.g. James" required />
                             </div>
                             <div class="field">
                                 <label>Last name</label>
-                                <input type="text" placeholder="e.g. Smith" id="lname" />
+                                <input type="text" name="last_name" placeholder="e.g. Smith" />
                             </div>
                         </div>
 
                         <div class="field">
                             <label>Business name</label>
-                            <input type="text" placeholder="e.g. your trade business name" id="business" />
+                            <input type="text" placeholder="e.g. your trade business name" name="business_name" />
                         </div>
 
                         <div class="field-row">
                             <div class="field">
                                 <label>Phone number</label>
-                                <input type="tel" placeholder="e.g. 07700 900000" id="phone" />
+                                <input type="tel" name="phone" placeholder="e.g. 07700 900000" required />
                             </div>
                             <div class="field">
                                 <label>Email address</label>
-                                <input type="email" placeholder="e.g. james@business.co.uk" id="email" />
+                                <input type="email" name="email" placeholder="e.g. james@business.co.uk" required />
                             </div>
                         </div>
 
                         <div class="field">
                             <label>Do you currently have a website?</label>
-                            <select id="existing">
+                            <select name="existing_website">
                                 <option value="" disabled selected>Please select</option>
                                 <option>No — I need one built from scratch</option>
                                 <option>Yes — but it needs a full redesign</option>
@@ -618,28 +618,28 @@
                             <label>Which package are you interested in?</label>
                             <div class="package-options" id="packages">
                                 <label class="package-option" onclick="selectPackage(this)">
-                                    <input type="radio" name="package" value="essential" />
+                                    <input type="radio" name="package" value="Essential - £399" />
                                     <div class="package-option-text">
                                         <span class="package-option-name">Essential — up to 3 pages</span>
                                         <span class="package-option-price">£399</span>
                                     </div>
                                 </label>
                                 <label class="package-option" onclick="selectPackage(this)">
-                                    <input type="radio" name="package" value="professional" />
+                                    <input type="radio" name="package" value="Professional - £599" />
                                     <div class="package-option-text">
                                         <span class="package-option-name">Professional — up to 6 pages</span>
                                         <span class="package-option-price">£599</span>
                                     </div>
                                 </label>
                                 <label class="package-option" onclick="selectPackage(this)">
-                                    <input type="radio" name="package" value="pro">
+                                    <input type="radio" name="package" value="Business Pro - £999">
                                     <div class="package-option-text">
                                         <span class="package-option-name">Business Pro — up to 10 pages</span>
                                         <span class="package-option-price">£999</span>
                                     </div>
                                 </label>
                                 <label class="package-option" onclick="selectPackage(this)">
-                                    <input type="radio" name="package" value="unsure" />
+                                    <input type="radio" name="package" value="Not sure yet" />
                                     <div class="package-option-text">
                                         <span class="package-option-name">Not sure yet — help me decide</span>
                                         <span class="package-option-price"></span>
@@ -650,11 +650,12 @@
 
                         <div class="field">
                             <label>Anything else we should know?</label>
-                            <textarea placeholder="e.g. We're a roofing company based in Sheffield and want a site that showcases our work and gets us more local enquiries..." id="message"></textarea>
+                            <textarea placeholder="e.g. We're a roofing company based in Sheffield and want a site that showcases our work and gets us more local enquiries..." name="message"></textarea>
                         </div>
 
-                        <button class="submit-btn" onclick="handleSubmit()">Send My Enquiry</button>
+                        <button type="submit" class="submit-btn">Send My Enquiry</button>
                         <p class="form-note">We'll never share your details with anyone. Expect a response within one working day.</p>
+                    </form>
                     </div>
 
                     <div class="success-state" id="success-state">
@@ -687,6 +688,31 @@
         function closeMenu() {
             menuOpen = false;
             menuEl.style.display = 'none';
+        }
+
+        function selectPackage(el) {
+            document.querySelectorAll('.package-option').forEach(function(opt) {
+                opt.classList.remove('selected');
+            });
+            el.classList.add('selected');
+        }
+
+        var form = document.getElementById('enquiry-form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var data = new FormData(form);
+                fetch('https://formspree.io/f/xwvwlboe', {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                }).then(function(response) {
+                    if (response.ok) {
+                        document.getElementById('form-content').style.display = 'none';
+                        document.getElementById('success-state').style.display = 'block';
+                    }
+                });
+            });
         }
     </script>
 </body>

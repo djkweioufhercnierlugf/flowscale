@@ -510,7 +510,7 @@
                             </div>
                             <div class="contact-item">
                                 <span class="contact-icon">📧</span>
-                        <span><a href="mailto:jenson@flowscalemarketing.co.uk" style="color:var(--gray);text-decoration:none;">jenson@flowscalemarketing.co.uk</a></span>
+                                <span><a href="/cdn-cgi/l/email-protection#761c131805191836101a19010515171a131b17041d13021f181158151958031d" style="color:var(--gray);text-decoration:none;"><span class="__cf_email__" data-cfemail="bbd1ded5c8d4d5fbddd7d4ccc8d8dad7ded6dac9d0decfd2d5dc95d8d495ced0">[email&#160;protected]</span></a></span>
                             </div>
                             <div class="contact-item">
                                 <span class="contact-icon">🕐</span>
@@ -526,38 +526,38 @@
                         <h2>Tell us about your business</h2>
                         <p>Takes less than 2 minutes. We'll take it from there.</p>
 
+                        <form action="https://formspree.io/f/xwvwlboe" method="POST" id="enquiry-form">
                         <div class="field-row">
                             <div class="field">
                                 <label>First name</label>
-                                <input type="text" placeholder="e.g. James" id="fname" />
+                                <input type="text" name="first_name" placeholder="e.g. James" required />
                             </div>
                             <div class="field">
                                 <label>Last name</label>
-                                <input type="text" placeholder="e.g. Smith" id="lname" />
+                                <input type="text" name="last_name" placeholder="e.g. Smith" />
                             </div>
                         </div>
 
                         <div class="field">
                             <label>Business name</label>
-                            <input type="text" placeholder="e.g. Smith Plumbing & Heating" id="business" />
+                            <input type="text" name="business_name" placeholder="e.g. Smith Plumbing & Heating" />
                         </div>
 
                         <div class="field-row">
                             <div class="field">
                                 <label>Phone number</label>
-                                <input type="tel" placeholder="e.g. 07700 900000" id="phone" />
+                                <input type="tel" name="phone" placeholder="e.g. 07700 900000" required />
                             </div>
                             <div class="field">
                                 <label>Email address</label>
-                                <input type="email" placeholder="e.g. james@business.co.uk" id="email" />
+                                <input type="email" name="email" placeholder="e.g. james@business.co.uk" required />
                             </div>
                         </div>
 
                         <div class="field">
                             <label>Which service are you interested in?</label>
-                            <select id="service">
+                            <select name="service">
                                 <option value="" disabled selected>Select a service</option>
-                                <option>Google SEO</option>
                                 <option>Meta Ads (Facebook & Instagram)</option>
                                 <option>Google Ads</option>
                                 <option>Full marketing package</option>
@@ -567,11 +567,12 @@
 
                         <div class="field">
                             <label>Tell us a bit about your situation</label>
-                            <textarea placeholder="e.g. We're a two-van plumbing business based in Leeds. We get most of our work through word of mouth but want to grow our online enquiries..." id="message"></textarea>
+                            <textarea name="message" placeholder="e.g. We're a two-van plumbing business based in Leeds. We get most of our work through word of mouth but want to grow our online enquiries..."></textarea>
                         </div>
 
-                        <button class="submit-btn" onclick="handleSubmit()">Send Enquiry</button>
+                        <button type="submit" class="submit-btn">Send Enquiry</button>
                         <p class="form-note">We'll never share your details with anyone. Expect a response within one working day.</p>
+                        </form>
                     </div>
 
                     <div class="success-state" id="success-state">
@@ -604,6 +605,24 @@
         function closeMenu() {
             menuOpen = false;
             menuEl.style.display = 'none';
+        }
+
+        var form = document.getElementById('enquiry-form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                var data = new FormData(form);
+                fetch('https://formspree.io/f/xwvwlboe', {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                }).then(function(response) {
+                    if (response.ok) {
+                        document.getElementById('form-content').style.display = 'none';
+                        document.getElementById('success-state').style.display = 'block';
+                    }
+                });
+            });
         }
     </script>
 </body>
